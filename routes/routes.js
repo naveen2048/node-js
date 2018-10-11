@@ -73,7 +73,7 @@ var appRouter = function(app) {
     }
 
     if (shop && hmac && code) {
-      if(!validateRequest(req)) {
+      if(!validateRequest(req,hmac)) {
         return "Request invalid or not from shopify";
       }
 
@@ -86,9 +86,9 @@ var appRouter = function(app) {
     }
   });
 
-  function validateRequest(req) {
+  function validateRequest(req,hmac) {
     const map = Object.assign({}, req.query);
-    const { shop,hmac, code, state } = req.query;
+
     delete map["signature"];
     delete map["hmac"];
     const message = querystring.stringify(map);
