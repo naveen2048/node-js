@@ -1,4 +1,3 @@
-var request = require("request");
 var superagent = require("superagent");
 const nonce = require('nonce')();
 const cookie = require('cookie');
