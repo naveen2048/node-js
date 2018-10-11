@@ -20,7 +20,7 @@ var appRouter = function(app) {
       .get("https://zinnga.myshopify.com/admin/orders.json")
       .set("Accept", "application/json")
       //.set('X-Shopify-Storefront-Access-Token', shopifytoken)
-      .auth(apiKey, apiSecret)
+      .auth("f48c2679dcae5ef7a399444b45ab5c95", "fd69fe9f795a4a6248e415b2f1a9907b")
       .end((err, response) => {
         if (err) {
           return console.log(err);
