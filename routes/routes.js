@@ -88,6 +88,7 @@ var appRouter = function(app) {
 
   function validateRequest(req) {
     const map = Object.assign({}, req.query);
+    const { shop,hmac, code, state } = req.query;
     delete map["signature"];
     delete map["hmac"];
     const message = querystring.stringify(map);
