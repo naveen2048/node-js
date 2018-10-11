@@ -81,6 +81,7 @@ var appRouter = function(app) {
       // Validate request is from Shopify
       // Exchange temporary code for a permanent access token
       // Use access token to make API call to 'shop' endpoint
+      res.render('index');
     } else {
       res.status(400).send("Required parameters missing");
     }
