@@ -3,7 +3,8 @@ var superagent = require("superagent");
 const nonce = require('nonce')();
 const cookie = require('cookie');
 const crypto = require('crypto');
-
+const querystring = require('querystring');
+const request = require('request-promise');
 
 
 const apiKey = "a35d53496a9148de40d1652be43fd9d3";//process.env.SHOPIFY_API_KEY;
