@@ -1,5 +1,6 @@
 var request = require("request");
 var superagent = require("superagent");
+const nonce = require('nonce')();
 
 const apiKey = "a35d53496a9148de40d1652be43fd9d3";//process.env.SHOPIFY_API_KEY;
 const apiSecret = "2c457122c3e7372ed5dae081cdd130c3"; //process.env.SHOPIFY_API_SECRET;
