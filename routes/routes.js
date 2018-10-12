@@ -12,6 +12,8 @@ const shopifytoken = process.env.SHOPIFY_TOKEN;
 const scopes = "read_products";
 const forwardingAddress = "https://mnk-courier-app.herokuapp.com";
 
+
+
 var appRouter = function(app) {
 
   //home page
@@ -81,6 +83,7 @@ var appRouter = function(app) {
       // Validate request is from Shopify
       // Exchange temporary code for a permanent access token
       // Use access token to make API call to 'shop' endpoint
+      app.locals.mystore = shop;
       res.render('index');
     } else {
       res.status(400).send("Required parameters missing");
