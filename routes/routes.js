@@ -12,7 +12,7 @@ const shopifytoken = process.env.SHOPIFY_TOKEN;
 const scopes = "read_products";
 const forwardingAddress = "https://mnk-courier-app.herokuapp.com";
 
-
+app.locals.mystore = "";
 
 var appRouter = function(app) {
 
