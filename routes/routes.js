@@ -16,7 +16,7 @@ const forwardingAddress = "https://mnk-courier-app.herokuapp.com";
 
 var appRouter = function(app) {
   app.locals.mystore = "";
-  
+
   //home page
   app.get('/', function(req,res){
      //ejs render
@@ -84,8 +84,8 @@ var appRouter = function(app) {
       // Validate request is from Shopify
       // Exchange temporary code for a permanent access token
       // Use access token to make API call to 'shop' endpoint
-      app.locals.mystore = shop;
-      res.render('index');
+      var mystore = shop;
+      res.render('index', { mystore: mystore });
     } else {
       res.status(400).send("Required parameters missing");
     }
